@@ -11,7 +11,7 @@ def show_messages(text):
     messages_str = [
         f"{_['role']}: {_['content']}" for _ in st.session_state["messages"][1:]
     ]
-    text.text_area("Messages", value=str("\n".join(messages_str)), height=400)
+    text.text_area("Messages", value="\n".join(messages_str), height=400)
 
 with st.sidebar:
     choose = option_menu("Streamlit GPT", [ "GPT Play Ground","About","Contact"],
